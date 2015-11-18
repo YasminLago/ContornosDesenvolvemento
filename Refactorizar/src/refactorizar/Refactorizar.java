@@ -10,8 +10,7 @@ public class Refactorizar {
         boolean p = false;
         int numDigitos = 4;
         int ndigitos;
-        
-        
+
         for (int i = 1; i <= 99999; i++) {
             int divisionEntera = i;
 
