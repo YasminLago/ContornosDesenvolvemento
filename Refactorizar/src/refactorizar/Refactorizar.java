@@ -8,9 +8,9 @@ public class Refactorizar {
 
     public static void main(String[] args) {
         boolean p = false;
-        int numDigitos=0;
-        int ndigitos;
-        
+        int numDigitos = 0;
+        int ndigitos = 0;
+        numDigitos = 4;
         
         for (int i = 1; i <= 99999; i++) {
             int divisionEntera = i;
