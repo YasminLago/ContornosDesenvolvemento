@@ -10,7 +10,7 @@ public class Refactorizar {
         boolean esPrimo = false;
         int numDigitos = 4;
         int ndigitos = 0;
-        
+
         introducirNumDigitos(numDigitos);
         for (int numComparar = 1; numComparar <= 99999; numComparar++) {
             int contador = contadorNumDigitos(numComparar);
@@ -30,7 +30,7 @@ public class Refactorizar {
                             limite--;
                         }
 
-                        esPrimo = contadorDivisiones(i1, limite, numComparar, contador1, esPrimo);
+                        esPrimo = contadorDivisiones(i1, limite, numComparar, contador1);
                     }
                 }
 
@@ -41,7 +41,8 @@ public class Refactorizar {
         }
     }
 
-    public static boolean contadorDivisiones(int i1, int limite, int numComparar, int contador1, boolean esPrimo) {
+    public static boolean contadorDivisiones(int i1, int limite, int numComparar, int contador1) {
+        boolean esPrimo = false;
         while (i1 <= limite) {
             if (numComparar % i1 == 0) {
                 contador1++;
@@ -52,8 +53,8 @@ public class Refactorizar {
             }
         }
         if (contador1 == 1) {
-                            esPrimo = true;
-                        }
+            esPrimo = true;
+        }
         return esPrimo;
     }
 
@@ -71,6 +72,7 @@ public class Refactorizar {
         if (numDigitos <= 0) {
             System.out.println("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): ");
         }
+
     }
 
 }
